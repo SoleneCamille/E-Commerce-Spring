@@ -29,7 +29,7 @@ public class Commande implements Serializable {
 	private double prixAvant;
 	private double prixApres;
 	// transformation UML en java
-	@OneToMany(mappedBy = "commande", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "commande", cascade = CascadeType.ALL)
 	private List<LignesCommande> listeLigneCommande;
 	@ManyToOne
 	@JoinColumn(name = "client_id", referencedColumnName = "id_client")

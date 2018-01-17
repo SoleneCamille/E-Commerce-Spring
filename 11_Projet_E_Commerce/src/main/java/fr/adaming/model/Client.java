@@ -30,7 +30,7 @@ public class Client implements Serializable {
 	
 
 	// UML en java
-	@OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+	@OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
 	private List<Commande> listeCommande;
 
 	public Client() {

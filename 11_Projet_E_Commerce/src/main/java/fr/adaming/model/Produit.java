@@ -45,7 +45,7 @@ public class Produit implements Serializable {
 	@JoinColumn(name = "cat_id", referencedColumnName = "id_cat")
 	private Categorie categorie;
 
-	@OneToMany(mappedBy = "produit", cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+	@OneToMany(mappedBy = "produit", cascade = CascadeType.ALL)
 	private List<LignesCommande> lignesCommande;
 
 	// déclaration des constructeurs

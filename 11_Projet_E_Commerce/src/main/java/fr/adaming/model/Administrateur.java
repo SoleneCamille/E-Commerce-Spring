@@ -23,7 +23,6 @@ public class Administrateur implements Serializable{
 	
 	
 	
-	
 	//déclaration des constructeurs
 	public Administrateur() {
 		super();
