@@ -35,60 +35,30 @@ public class CategorieDaoImpl implements ICategorieDao {
 		return query.list();
 	}
 
-	
-
 	@Override
 	public Categorie addCategorie(Categorie cat) {
-		// recupérer la session hibernate
-		Session s = sf.getCurrentSession();
-		s.save(cat);
-		//envoi de la requete
-		return cat;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public Categorie updateCategorie(Categorie cat) {
-		// recupérer la session hibernate
-		Session s = sf.getCurrentSession();
-		s.saveOrUpdate(cat);
-		return cat;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public int deleteCategorie(int idCategorie) {
-		// recupérer la session hibernate
-		Session s = sf.getCurrentSession();
-		//création de la requete HQL
-		String req = "delete Categorie as cat where cat.idCategorie = :pId";
-		
-		//creation du query
-		Query query = s.createQuery(req);
-		
-		//assignation des paramètres de la requete
-		query.setParameter("pId", idCategorie);
-		
-		return query.executeUpdate();
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	public Categorie getCategorieByIdOrName(Categorie cat) {
-		// recupérer la session hibernate
-		Session s = sf.getCurrentSession();
-		//creation de la requete HQL
-		String req = "FROM Categorie as cat where cat.idCategorie=:pId "
-				+ "or cat.nomCategorie=:pNom";
-		
-		//creation du query
-		Query query = s.createQuery(req);
-		
-		//assignation des paramètres
-		query.setParameter("pId", cat.getIdCategorie());
-		query.setParameter("pNom", cat.getNomCategorie());
-		
-		//envoi de la requete et récupération du resultat
-		Categorie catFind = (Categorie) query.uniqueResult();
-			
-		return catFind;
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+	
 
 }
