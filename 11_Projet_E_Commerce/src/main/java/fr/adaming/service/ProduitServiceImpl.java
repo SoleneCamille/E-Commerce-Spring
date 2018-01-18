@@ -26,6 +26,14 @@ public class ProduitServiceImpl implements IProduitService {
 	public void setCatDao(ICategorieDao catDao) {
 		this.catDao = catDao;
 	}
+	
+	
+
+	public void setProduitDao(IProduitDao produitDao) {
+		this.produitDao = produitDao;
+	}
+
+
 
 	@Override
 	public Produit addProduit(Produit p, Categorie c) {
