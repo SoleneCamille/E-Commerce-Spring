@@ -15,9 +15,9 @@ import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 
-//import org.apache.tomcat.util.codec.binary.Base64;
-import org.primefaces.event.FileUploadEvent;
-import org.primefaces.model.UploadedFile;
+import org.apache.tomcat.util.codec.binary.Base64;
+//import org.primefaces.event.FileUploadEvent;
+//import org.primefaces.model.UploadedFile;
 
 import fr.adaming.model.Categorie;
 import fr.adaming.model.Produit;
@@ -121,7 +121,7 @@ public class CategorieManagedBean implements Serializable {
 				if (element.getPhoto() == null) {
 					element.setImage(null);
 				} else {
-					//element.setImage("data:image/jpeg;base64," + Base64.encodeBase64String(element.getPhoto()));
+					element.setImage("data:image/jpeg;base64," + Base64.encodeBase64String(element.getPhoto()));
 				}
 				this.listeCategories.add(element);
 			}
